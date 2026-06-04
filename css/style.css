@@ -391,6 +391,20 @@ main section {
   display: inline-block;
 }
 
+.point-list {
+  text-align: left;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.point-list li {
+  display: list-item;
+  border: none;
+  padding: 4px 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 
 @media (max-width: 768px) {
   nav {
