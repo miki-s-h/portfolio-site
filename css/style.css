@@ -428,7 +428,7 @@ main section {
 }
 
 @media (max-width: 768px) {
-  .cafe2-img {
+  .cafe-img {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -449,7 +449,7 @@ main section {
 }  
 
 @media (max-width: 768px) {
-  .cafe2-img {
+  .cafe-img {
     width: 100%;
     max-width: 100%;
   }
