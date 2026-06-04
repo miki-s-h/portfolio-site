@@ -195,6 +195,11 @@ h2 {
   font-weight: bold;
 }
 
+#hero p {
+  margin-top: 20px;
+  text-align: center;
+}
+
 header nav {
   margin-top: 10px;
 }
@@ -367,6 +372,25 @@ form button:hover {
   background: hotpink;
 }
 
+.cafe2-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+main section {
+  padding: 40px 0;
+}
+
+.cafe h2 {
+  border-bottom: 2px solid #4a3f35;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
 
 @media (max-width: 768px) {
   nav {
@@ -390,7 +414,7 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-  .cafe-img {
+  .cafe2-img {
   width: 100%;
   max-width: 500px;
   height: auto;
