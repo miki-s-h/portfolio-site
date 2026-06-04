@@ -448,6 +448,13 @@ main section {
   }
 }  
 
+@media (max-width: 768px) {
+  .cafe2-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
 
 
