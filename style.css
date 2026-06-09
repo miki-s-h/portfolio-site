@@ -391,11 +391,6 @@ main section {
   display: inline-block;
 }
 
-#hero p {
-  margin-top: 20px;
-  text-align: center;
-}
-
 .point-list {
   text-align: left;
   list-style: disc;
@@ -410,6 +405,7 @@ main section {
   border-radius: 0;
 }
 
+
 @media (max-width: 768px) {
   nav {
     display: flex;
@@ -417,17 +413,12 @@ main section {
     align-items: center;
     gap: 10px;
   }
-
   nav a {
-    display: block;
+    display: block; /* ← これを追加！ */
     width: fit-content;
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 @media (max-width: 768px) {
   main {
@@ -438,24 +429,24 @@ img {
 
 @media (max-width: 768px) {
   .cafe-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
+  }
 
 @media (max-width: 768px) {
   .portfolio header {
-    padding: 15px;
+    padding: 15px;  /* 余白を小さく */
   }
 
   .portfolio header h1 {
-    font-size: 1.2rem;
+    font-size: 1.2rem;  /* 文字を小さく */
   }
-}
+}  
 
 @media (max-width: 768px) {
   .cafe-img {
@@ -463,3 +454,9 @@ img {
     max-width: 100%;
   }
 }
+
+
+
+
+
+
