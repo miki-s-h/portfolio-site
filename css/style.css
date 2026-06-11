@@ -500,6 +500,310 @@ main section {
   transition: 0.3s;
 }
 
+/* ===========================
+   Pastel Party Live — style.css
+   カラー: ラベンダー × ミント
+   雰囲気: キラキラ・夢みたい
+=========================== */
+
+/* ---------- リセット & 基本 ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --lavender:     #c9b8f0;
+  --lavender-lt:  #ede8fb;
+  --mint:         #a8e6d8;
+  --mint-lt:      #dff6f0;
+  --white:        #ffffff;
+  --text:         #4a3f6b;
+  --text-light:   #7a6e99;
+}
+
+body.event {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--lavender-lt);
+  line-height: 1.7;
+}
+
+/* ---------- ヘッダー ---------- */
+body.event header {
+  background: linear-gradient(135deg, var(--lavender) 0%, var(--mint) 100%);
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(150, 120, 220, 0.2);
+}
+
+body.event header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px rgba(120, 80, 200, 0.25);
+}
+
+body.event header > p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.3rem;
+}
+
+body.event nav {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+body.event nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+
+body.event nav a:hover {
+  background: var(--white);
+  color: var(--lavender);
+}
+
+/* ---------- ヒーローセクション ---------- */
+body.event #hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(160deg, #e8deff 0%, #d4f5ee 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+body.event #hero::before,
+body.event #hero::after {
+  content: '✦';
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.15;
+  color: var(--lavender);
+}
+body.event #hero::before { top: 10%; left: 5%; }
+body.event #hero::after  { bottom: 10%; right: 5%; font-size: 3rem; color: var(--mint); }
+
+body.event #hero h2 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #9b72ef, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+body.event .catchcopy {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+body.event .event-date,
+body.event .event-place {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.3rem 0;
+}
+
+/* ---------- 共通セクション ---------- */
+body.event section {
+  padding: 4rem 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+body.event section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+body.event section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--lavender), var(--mint));
+  margin: 0.5rem auto 0;
+}
+
+/* ---------- About ---------- */
+body.event #about {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(180, 150, 240, 0.1);
+  max-width: 860px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+body.event #about p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* ---------- Artist ---------- */
+body.event #artist {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+body.event .artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+body.event .artist-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 240px;
+  box-shadow: 0 4px 20px rgba(160, 130, 230, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.event .artist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(160, 130, 230, 0.25);
+}
+
+body.event .artist-card p:first-child {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+
+body.event .artist-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+body.event .artist-card p:last-child {
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+/* ---------- Ticket ---------- */
+body.event #ticket {
+  background: linear-gradient(135deg, var(--lavender-lt), var(--mint-lt));
+  border-radius: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+body.event .ticket-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+body.event .ticket-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  flex: 1 1 180px;
+  max-width: 240px;
+  box-shadow: 0 4px 20px rgba(140, 200, 190, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+body.event .ticket-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--lavender), var(--mint));
+}
+
+body.event .ticket-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: var(--text);
+}
+
+body.event .price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--lavender);
+  margin-bottom: 0.5rem;
+}
+
+body.event .ticket-card p:last-child {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* ---------- Access ---------- */
+body.event #access {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 4px 24px rgba(160, 130, 230, 0.1);
+  text-align: center;
+}
+
+body.event #access p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin: 0.5rem 0;
+}
+
+/* ---------- フッター ---------- */
+body.event footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--lavender), var(--mint));
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 600px) {
+  body.event header h1 { font-size: 1.3rem; }
+  body.event nav a { font-size: 0.78rem; padding: 0.25rem 0.7rem; }
+  body.event .artist-card,
+  body.event .ticket-card { max-width: 100%; }
+  body.event section { padding: 3rem 1rem; }
+}
+
 @media (max-width: 768px) {
   nav {
     display: flex;
