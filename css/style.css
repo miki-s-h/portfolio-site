@@ -659,7 +659,7 @@ body.event .ticket-card {
   max-width: 240px;
   box-shadow: 0 4px 20px rgba(140, 200, 190, 0.2);
   position: relative;
-   /* overflow: hidden; ← 一時的にコメントアウト */
+  /* overflow: hidden; ← 削除 */
 }
 
 body.event .ticket-card::before {
@@ -668,6 +668,7 @@ body.event .ticket-card::before {
   top: 0; left: 0; right: 0;
   height: 5px;
   background: linear-gradient(90deg, var(--lavender), var(--mint));
+  border-radius: 16px 16px 0 0;  /* ← 追加：上だけ角丸に */
 }
 
 body.event .ticket-card h3 {
