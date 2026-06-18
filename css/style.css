@@ -474,6 +474,16 @@ body.event nav {
   gap: 0.5rem;
 }
 
+body.event nav {
+  background: transparent;
+  padding: 0;
+  border-bottom: none;
+}
+
+body.event nav a {
+  background: transparent;
+}
+
 body.event nav a {
   color: var(--white);
   text-decoration: none;
@@ -649,7 +659,7 @@ body.event .ticket-card {
   max-width: 240px;
   box-shadow: 0 4px 20px rgba(140, 200, 190, 0.2);
   position: relative;
-  overflow: hidden;
+   /* overflow: hidden; ← 一時的にコメントアウト */
 }
 
 body.event .ticket-card::before {
@@ -677,6 +687,24 @@ body.event .price {
 body.event .ticket-card p:last-child {
   font-size: 0.85rem;
   color: var(--text-light);
+}
+
+body.event .btn-ticket {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.8rem;
+  background: linear-gradient(90deg, var(--lavender), var(--mint));
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.event .btn-ticket:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(160, 130, 230, 0.3);
 }
 
 /* ---------- Access ---------- */
@@ -707,9 +735,15 @@ body.event footer {
 }
 
 /* ---------- レスポンシブ ---------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body.event header h1 { font-size: 1.3rem; }
   body.event nav a { font-size: 0.78rem; padding: 0.25rem 0.7rem; }
+  body.event nav {
+    flex-direction: row;
+  }
+  body.event nav a {
+    display: inline-block;
+  } 
   body.event .artist-card,
   body.event .ticket-card { max-width: 100%; }
   body.event section { padding: 3rem 1rem; }
@@ -793,5 +827,16 @@ img {
   .event .artist-card,
   .event .ticket-card {
     width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  body.event .ticket-card {
+    padding: 1.5rem 1rem;
+  }
+
+  body.event .btn-ticket {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 }
