@@ -1,14 +1,25 @@
-/* 全体設定 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
+/* ---------- body ---------- */
 body {
   background-color: #f5f5f5;
   font-family: sans-serif;
   margin: 0;
+  line-height: 1.6;
 }
 
+/* ---------- header ---------- */
 header {
   background-color: pink;
   color: white;
@@ -16,6 +27,12 @@ header {
   padding: 30px;
 }
 
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* ---------- main ---------- */
 main {
   background-color: white;
   width: 80%;
@@ -23,18 +40,50 @@ main {
   padding: 20px;
 }
 
+main section {
+  padding: 40px 0;
+}
+
+/* ---------- h2（グローバル） ---------- */
 h2 {
   border-left: 8px solid pink;
   padding-left: 10px;
 }
 
+/* ---------- footer ---------- */
 footer {
   text-align: center;
-  padding: 20px;
-  color: gray;
+  padding: 30px;
+  color: #888;
+  font-size: 14px;
 }
 
-/* プロフィール画像 */
+/* ---------- nav ---------- */
+nav {
+  background: white;
+  padding: 15px;
+  border-bottom: 2px solid #ffe4ec;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 8px 18px;
+  background: #ffb6c1;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: hotpink;
+  transform: translateY(-2px);
+}
+
+/* ---------- プロフィール画像 ---------- */
 .profile-img {
   width: 200px;
   height: 200px;
@@ -42,17 +91,7 @@ footer {
   object-fit: cover;
 }
 
-/* ナビ */
-nav {
-  text-align: center;
-}
-
-nav a {
-  display: inline-block;
-  margin: 10px;
-}
-
-/* スキル */
+/* ---------- スキル ---------- */
 ul {
   list-style: none;
   padding: 0;
@@ -67,7 +106,15 @@ li {
   border-radius: 10px;
 }
 
-/* ===== Works ===== */
+.skill-list li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+/* ---------- Works ---------- */
 #works {
   padding: 80px 20px;
   text-align: center;
@@ -86,6 +133,7 @@ li {
   padding: 20px;
   border-radius: 10px;
   background: white;
+  transition: 0.3s;
 }
 
 .work-card img {
@@ -95,32 +143,6 @@ li {
   object-fit: cover;
 }
 
-/* ===== ナビを可愛く ===== */
-
-nav {
-  background: white;
-  padding: 15px;
-  border-bottom: 2px solid #ffe4ec;
-}
-
-nav a {
-  display: inline-block;
-  margin: 0 15px;
-  padding: 8px 18px;
-  background: #ffb6c1;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-/* ホバー効果（超大事✨） */
-nav a:hover {
-  background: hotpink;
-  transform: translateY(-2px);
-}
-
 .work-card a {
   text-decoration: none;
   color: black;
@@ -128,202 +150,24 @@ nav a:hover {
 }
 
 .work-card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* ---------- 共通ボタン ---------- */
 .back-btn {
   display: block;
   width: 200px;
   margin: 30px auto;
   padding: 15px;
-  background-color:hotpink;
+  background-color: hotpink;
   color: white;
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
 }
 
-.work-card {
-  transition: 0.3s;
-}
-
-.work-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.skill-list li{
-  display:inline-block;
-  margin:10px;
-  padding:10px 20px;
-  border:1px solid #ccc;
-  border-radius:20px;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#888;
-  font-size:14px;
-}
-
-header p{
-  margin-top:10px;
-  font-size:18px;
-}
-
-/* カフェ全体の余白と見た目を整える */
-main {
-  background: #fff;
-}
-
-/* セクションの見出しを整える */
-h2 {
-  border-bottom: 2px solid #4a3f35;
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-/* アクセスを少し見やすく */
-#access p {
-  margin: 5px 0;
-}
-
-#hero p {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-#hero p {
-  margin-top: 20px;
-  text-align: center;
-}
-
-header nav {
-  margin-top: 10px;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* 横並びレイアウト */
-.menu-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* カード本体 */
-.menu-card {
-  background: white;
-  width: 180px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: 0.2s;
-}
-
-/* ホバーでちょい浮く */
-.menu-card:hover {
-  transform: translateY(-5px);
-}
-
-.cafe header {
-  background: linear-gradient(
-    rgba(74, 63, 53, 0.85),
-    rgba(74, 63, 53, 0.85)
-  ),
-  url("../images/cafe.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 60px 20px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-.index h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.index h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.index .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.portfolio main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.portfolio h1 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 2rem;
-}
-
-.portfolio h2 {
-  margin-top: 40px;
-  border-left: 5px solid #4a3f35;
-  padding-left: 10px;
-}
-
-.portfolio p,
-.portfolio li {
-  line-height: 1.8;
-}
-
-.portfolio .detail-img {
-
-  width: 80%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-.portfolio header{
-  background-color:mediumturquoise;
-  color: white;
-  text-align: center;
-  padding: 30px;
-}
-
-.portfolio .back-btn {
-  display: block;
-  width: 200px;
-  margin: 30px auto;
-  padding: 15px;
-  background-color:mediumturquoise;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-/* お問い合わせフォーム */
+/* ---------- お問い合わせフォーム ---------- */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -372,6 +216,52 @@ form button:hover {
   background: hotpink;
 }
 
+/* =========================================
+   index ページ専用
+   ========================================= */
+.index h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.index h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.index .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   café ページ専用
+   ========================================= */
+.cafe header {
+  background: linear-gradient(
+    rgba(74, 63, 53, 0.85),
+    rgba(74, 63, 53, 0.85)
+  ),
+  url("../images/cafe.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.cafe h2 {
+  border-left: none;
+  border-bottom: 2px solid #4a3f35;
+  padding-left: 0;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
 .cafe-img {
   width: 100%;
   max-width: 600px;
@@ -381,19 +271,44 @@ form button:hover {
   border-radius: 10px;
 }
 
-main section {
-  padding: 40px 0;
-}
-
-.cafe h2 {
-  border-bottom: 2px solid #4a3f35;
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-#hero p {
+.cafe #hero p {
+  font-size: 1.4rem;
+  font-weight: bold;
   margin-top: 20px;
   text-align: center;
+}
+
+.cafe header nav {
+  margin-top: 10px;
+}
+
+.cafe header nav a:hover {
+  text-decoration: underline;
+}
+
+#access p {
+  margin: 5px 0;
+}
+
+.menu-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: white;
+  width: 180px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
 }
 
 .point-list {
@@ -410,28 +325,64 @@ main section {
   border-radius: 0;
 }
 
-
-/* ===========================
-   Pastel Party Live — style.css
-   カラー: ラベンダー × ミント
-   雰囲気: キラキラ・夢みたい
-=========================== */
-
-/* ---------- リセット & 基本 ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* =========================================
+   portfolio ページ専用
+   ========================================= */
+.portfolio header {
+  background-color: mediumturquoise;
+  color: white;
+  text-align: center;
+  padding: 30px;
 }
 
+.portfolio h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+}
+
+.portfolio h2 {
+  border-left: 5px solid #4a3f35;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+.portfolio p,
+.portfolio li {
+  line-height: 1.8;
+}
+
+.portfolio .detail-img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.portfolio main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.portfolio .back-btn {
+  background-color: mediumturquoise;
+}
+
+/* =========================================
+   Pastel Party Live（event）ページ専用
+   ========================================= */
 :root {
-  --lavender:     #c9b8f0;
-  --lavender-lt:  #ede8fb;
-  --mint:         #a8e6d8;
-  --mint-lt:      #dff6f0;
-  --white:        #ffffff;
-  --text:         #4a3f6b;
-  --text-light:   #7a6e99;
+  --lavender:    #c9b8f0;
+  --lavender-lt: #ede8fb;
+  --mint:        #a8e6d8;
+  --mint-lt:     #dff6f0;
+  --white:       #ffffff;
+  --text:        #4a3f6b;
+  --text-light:  #7a6e99;
 }
 
 body.event {
@@ -441,7 +392,6 @@ body.event {
   line-height: 1.7;
 }
 
-/* ---------- ヘッダー ---------- */
 body.event header {
   background: linear-gradient(135deg, var(--lavender) 0%, var(--mint) 100%);
   text-align: center;
@@ -467,6 +417,9 @@ body.event header > p {
 }
 
 body.event nav {
+  background: transparent;
+  padding: 0;
+  border-bottom: none;
   margin-top: 0.8rem;
   display: flex;
   justify-content: center;
@@ -474,17 +427,8 @@ body.event nav {
   gap: 0.5rem;
 }
 
-body.event nav {
-  background: transparent;
-  padding: 0;
-  border-bottom: none;
-}
-
 body.event nav a {
   background: transparent;
-}
-
-body.event nav a {
   color: var(--white);
   text-decoration: none;
   font-size: 0.85rem;
@@ -498,9 +442,9 @@ body.event nav a {
 body.event nav a:hover {
   background: var(--white);
   color: var(--lavender);
+  transform: none;
 }
 
-/* ---------- ヒーローセクション ---------- */
 body.event #hero {
   text-align: center;
   padding: 5rem 1.5rem 4rem;
@@ -529,6 +473,8 @@ body.event #hero h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
+  border: none;
+  padding: 0;
 }
 
 body.event .catchcopy {
@@ -546,7 +492,6 @@ body.event .event-place {
   margin: 0.3rem 0;
 }
 
-/* ---------- 共通セクション ---------- */
 body.event section {
   padding: 4rem 1.5rem;
   max-width: 860px;
@@ -560,6 +505,8 @@ body.event section h2 {
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
   position: relative;
+  border: none;
+  padding: 0;
 }
 
 body.event section h2::after {
@@ -572,7 +519,6 @@ body.event section h2::after {
   margin: 0.5rem auto 0;
 }
 
-/* ---------- About ---------- */
 body.event #about {
   background: var(--white);
   border-radius: 20px;
@@ -588,7 +534,6 @@ body.event #about p {
   line-height: 1.9;
 }
 
-/* ---------- Artist ---------- */
 body.event #artist {
   max-width: 860px;
   margin: 0 auto;
@@ -635,7 +580,6 @@ body.event .artist-card p:last-child {
   color: var(--text-light);
 }
 
-/* ---------- Ticket ---------- */
 body.event #ticket {
   background: linear-gradient(135deg, var(--lavender-lt), var(--mint-lt));
   border-radius: 20px;
@@ -659,7 +603,6 @@ body.event .ticket-card {
   max-width: 240px;
   box-shadow: 0 4px 20px rgba(140, 200, 190, 0.2);
   position: relative;
-  /* overflow: hidden; ← 削除 */
 }
 
 body.event .ticket-card::before {
@@ -668,7 +611,7 @@ body.event .ticket-card::before {
   top: 0; left: 0; right: 0;
   height: 5px;
   background: linear-gradient(90deg, var(--lavender), var(--mint));
-  border-radius: 16px 16px 0 0;  /* ← 追加：上だけ角丸に */
+  border-radius: 16px 16px 0 0;
 }
 
 body.event .ticket-card h3 {
@@ -708,7 +651,6 @@ body.event .btn-ticket:hover {
   box-shadow: 0 6px 16px rgba(160, 130, 230, 0.3);
 }
 
-/* ---------- Access ---------- */
 body.event #access {
   background: var(--white);
   border-radius: 20px;
@@ -724,7 +666,6 @@ body.event #access p {
   margin: 0.5rem 0;
 }
 
-/* ---------- フッター ---------- */
 body.event footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -735,22 +676,15 @@ body.event footer {
   letter-spacing: 0.05em;
 }
 
-/* ---------- レスポンシブ ---------- */
+/* =========================================
+   レスポンシブ（共通）
+   ========================================= */
 @media (max-width: 768px) {
-  body.event header h1 { font-size: 1.3rem; }
-  body.event nav a { font-size: 0.78rem; padding: 0.25rem 0.7rem; }
-  body.event nav {
-    flex-direction: row;
+  main {
+    width: 95%;
+    padding: 15px;
   }
-  body.event nav a {
-    display: inline-block;
-  } 
-  body.event .artist-card,
-  body.event .ticket-card { max-width: 100%; }
-  body.event section { padding: 3rem 1rem; }
-}
 
-@media (max-width: 768px) {
   nav {
     display: flex;
     flex-direction: column;
@@ -762,32 +696,11 @@ body.event footer {
     display: block;
     width: fit-content;
   }
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  main {
-    width: 95%;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 768px) {
   .cafe-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
+    max-width: 100%;
   }
-}
 
-@media (max-width: 768px) {
   .portfolio header {
     padding: 15px;
   }
@@ -797,41 +710,44 @@ img {
   }
 }
 
+/* =========================================
+   レスポンシブ（event ページ）
+   ========================================= */
 @media (max-width: 768px) {
-  .cafe-img {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* ===== Pastel Party Live レスポンシブ ===== */
-
-@media (max-width: 768px) {
-  .event header {
+  body.event header {
     padding: 30px 15px;
   }
 
-  .event header h1 {
-    font-size: 1.8rem;
+  body.event header h1 {
+    font-size: 1.3rem;
   }
 
-  .event .catchcopy {
-    font-size: 1rem;
+  body.event nav {
+    flex-direction: row;
   }
 
-  .event .artist-container,
-  .event .ticket-container {
+  body.event nav a {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  body.event section {
+    padding: 3rem 1rem;
+  }
+
+  body.event .artist-container,
+  body.event .ticket-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .event .artist-card,
-  .event .ticket-card {
+  body.event .artist-card,
+  body.event .ticket-card {
+    max-width: 100%;
     width: 80%;
   }
-}
 
-@media (max-width: 768px) {
   body.event .ticket-card {
     padding: 1.5rem 1rem;
   }
