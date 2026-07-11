@@ -677,6 +677,296 @@ body.event footer {
 }
 
 /* =========================================
+   nokka works（company）ページ専用
+   ========================================= */
+body.company {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  background: #F7F5F0;
+  color: #1F2D3D;
+}
+
+body.company header {
+  background: #1F2D3D;
+  color: #ffffff;
+  text-align: left;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.company #hero {
+  text-align: center;
+  padding: 48px 32px;
+  background: linear-gradient(180deg, #F7F5F0 0%, #EFEBE1 100%);
+}
+
+body.company .hero-label {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #A85A3B;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+body.company #hero h1 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #1F2D3D;
+  margin: 0 0 12px;
+  line-height: 1.5;
+  border: none;
+  padding: 0;
+}
+
+body.company .hero-text {
+  font-size: 14px;
+  color: #5C5A54;
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+body.company .hero-btn {
+  display: inline-block;
+  background: #1F2D3D;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+body.company .hero-btn:hover {
+  background: #35455A;
+}
+
+body.company .company-logo {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+
+body.company nav {
+  background: transparent;
+  padding: 0;
+  border-bottom: none;
+  text-align: right;
+}
+
+body.company nav a {
+  background: transparent;
+  color: #E8E4DC;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 4px 10px;
+  border-radius: 0;
+  margin: 0;
+}
+
+body.company nav a:hover {
+  background: transparent;
+  color: #ffffff;
+  transform: none;
+  text-decoration: underline;
+}
+
+body.company nav a.nav-highlight {
+  color: #C97B5A;
+  font-weight: bold;
+}
+
+body.company #service {
+  padding: 0 24px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body.company #service h2 {
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+body.company .service-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body.company .service-card {
+  background: #ffffff;
+  border: 0.5px solid #E4DFD3;
+  border-radius: 10px;
+  padding: 18px 14px;
+  text-align: center;
+  flex: 1 1 180px;
+  max-width: 220px;
+}
+
+body.company .service-card h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1F2D3D;
+  margin: 0 0 4px;
+}
+
+body.company .service-card p {
+  font-size: 11px;
+  color: #8A8880;
+  margin: 0;
+  line-height: 1.5;
+}
+
+body.company #about {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+body.company #about h2 {
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+body.company .about-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+body.company .about-table th,
+body.company .about-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #E4DFD3;
+}
+
+body.company .about-table th {
+  width: 100px;
+  color: #8A8880;
+  font-weight: 500;
+}
+
+body.company .about-table td {
+  color: #1F2D3D;
+}
+
+body.company #works {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+body.company #works h2 {
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+body.company .works-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body.company .work-card {
+  background: #ffffff;
+  border: 0.5px solid #E4DFD3;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 260px;
+  max-width: 320px;
+}
+
+body.company .work-card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1F2D3D;
+  margin: 0 0 8px;
+}
+
+body.company .work-card p {
+  font-size: 12px;
+  color: #8A8880;
+  margin: 0;
+  line-height: 1.6;
+}
+
+body.company #contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+body.company #contact h2 {
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+body.company #contact form label {
+  color: #8A8880;
+}
+
+body.company #contact form input,
+body.company #contact form textarea {
+  border: 1px solid #E4DFD3;
+  background: #ffffff;
+}
+
+body.company #contact form button {
+  background: #1F2D3D;
+  border-radius: 6px;
+  font-weight: normal;
+}
+
+body.company #contact form button:hover {
+  background: #35455A;
+}
+
+body.company footer {
+  background: #1F2D3D;
+  color: #9AA5B1;
+  padding: 16px 24px;
+}
+
+body.company .company-logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body.company footer {
+  text-align: center;
+}
+
+body.company .footer-back {
+  display: inline-block;
+  margin-top: 10px;
+  color: #9AA5B1;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+body.company .footer-back:hover {
+  color: #ffffff;
+}
+
+body.company #contact form input:focus,
+body.company #contact form textarea:focus {
+  outline: none;
+  border-color: #C97B5A;
+  box-shadow: 0 0 0 2px rgba(201, 123, 90, 0.15);
+}
+
+
+/* =========================================
    レスポンシブ（共通）
    ========================================= */
 @media (max-width: 768px) {
