@@ -325,6 +325,30 @@ form button:hover {
   border-radius: 0;
 }
 
+.cafe #contact form button {
+  background: #4a3f35;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cafe #contact form button:hover {
+  background: #6b5b4c;
+}
+
+.cafe #contact form input,
+.cafe #contact form textarea {
+  border: 1px solid #d8cfc4;
+}
+
+.cafe #contact form input:focus,
+.cafe #contact form textarea:focus {
+  outline: none;
+  border-color: #4a3f35;
+}
+
 /* =========================================
    portfolio ページ専用
    ========================================= */
@@ -965,6 +989,10 @@ body.company #contact form textarea:focus {
   box-shadow: 0 0 0 2px rgba(201, 123, 90, 0.15);
 }
 
+body.company .menu-toggle span {
+  background-color: #ffffff;
+}
+
 
 /* =========================================
    レスポンシブ（共通）
@@ -1076,11 +1104,46 @@ body.company #contact form textarea:focus {
   }
 
   .nav-menu {
-    display: none;
-    flex-direction: column;
+    display: none !important;
   }
 
   .nav-menu.is-open {
-    display: flex;
+    display: flex !important;
   }
+}
+
+/* 3本線→✕への変形 */
+.menu-toggle span {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  body.company header {
+    flex-wrap: wrap;
+  }
+
+  body.company .nav-menu {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
