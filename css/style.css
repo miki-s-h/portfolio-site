@@ -1148,39 +1148,9 @@ section {
   scroll-margin-top: 80px;
 }
 
-/* Lumière Instagram投稿 */
-.lumiere-instagram {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.lumiere-instagram img {
-  width: 30%;
-  max-width: 250px;
-  height: auto;
-}
-
-@media screen and (max-width: 768px) {
-  .lumiere-instagram {
-    flex-direction: column !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .lumiere-instagram img {
-    width: 80% !important;
-    max-width: 400px !important;
-  }
-}
-
 /* =========================================
    Lumière ページ専用
    ========================================= */
-
 body.portfolio.lumiere {
   background-color: #f8f5f0;
   color: #4a3f35;
@@ -1208,33 +1178,7 @@ body.portfolio.lumiere .back-btn:hover {
   background-color: #6f5a43;
 }
 
-/* =========================================
-   Lumière ページ専用
-   ========================================= */
-
-body.lumiere {
-  background-color: #f8f5f0;
-  color: #4a3f35;
-}
-
-body.lumiere header {
+body.portfolio.lumiere footer {
   background-color: #4a3f35;
-  color: #ffffff;
-}
-
-body.lumiere h2 {
-  border-left: 5px solid #b89b7a;
-  color: #4a3f35;
-}
-
-body.lumiere main {
-  background-color: #ffffff;
-}
-
-body.lumiere .back-btn {
-  background-color: #8b7355;
-}
-
-body.lumiere .back-btn:hover {
-  background-color: #6f5a43;
+  color: #e8ddd0;
 }
