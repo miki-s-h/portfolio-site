@@ -1207,3 +1207,34 @@ body.portfolio.lumiere .back-btn {
 body.portfolio.lumiere .back-btn:hover {
   background-color: #6f5a43;
 }
+
+/* =========================================
+   Lumière ページ専用
+   ========================================= */
+
+body.lumiere {
+  background-color: #f8f5f0;
+  color: #4a3f35;
+}
+
+body.lumiere header {
+  background-color: #4a3f35;
+  color: #ffffff;
+}
+
+body.lumiere h2 {
+  border-left: 5px solid #b89b7a;
+  color: #4a3f35;
+}
+
+body.lumiere main {
+  background-color: #ffffff;
+}
+
+body.lumiere .back-btn {
+  background-color: #8b7355;
+}
+
+body.lumiere .back-btn:hover {
+  background-color: #6f5a43;
+}
