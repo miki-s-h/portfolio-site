@@ -1173,3 +1173,29 @@ section {
     max-width: 400px;
   }
 }
+
+/* Lumière Instagram投稿 */
+.lumiere-instagram {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lumiere-instagram img {
+  width: 30%;
+  max-width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .lumiere-instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lumiere-instagram img {
+    width: 80%;
+    max-width: 400px;
+  }
+}
