@@ -1176,3 +1176,34 @@ section {
     max-width: 400px !important;
   }
 }
+
+/* =========================================
+   Lumière ページ専用
+   ========================================= */
+
+body.portfolio.lumiere {
+  background-color: #f8f5f0;
+  color: #4a3f35;
+}
+
+body.portfolio.lumiere header {
+  background-color: #4a3f35;
+  color: #ffffff;
+}
+
+body.portfolio.lumiere h2 {
+  border-left: 5px solid #b89b7a;
+  color: #4a3f35;
+}
+
+body.portfolio.lumiere main {
+  background-color: #ffffff;
+}
+
+body.portfolio.lumiere .back-btn {
+  background-color: #8b7355;
+}
+
+body.portfolio.lumiere .back-btn:hover {
+  background-color: #6f5a43;
+}
